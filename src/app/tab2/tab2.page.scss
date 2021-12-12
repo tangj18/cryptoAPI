@@ -1,0 +1,52 @@
+.searchBar{
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+}
+.title{
+   width: 100%;
+   justify-content: center;
+   align-items:  center;
+   text-align: center;
+   font-size: 30px;
+   font-weight: bold;
+   transform: scaleY(1.5);
+   margin-top: -200px;
+   margin-bottom: 20px;
+}
+.content{
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+}
+
+.inputField{
+    display:inline-block;
+    align-items: middle;
+    border-radius: 10px !important;
+    padding-right: 30px;
+    border: 1px solid rgb(68, 68, 68) !important;
+    width: 65%;       
+    margin-bottom: 40px;
+}
+
+.searchButton{
+    width:25%;
+    height: 35px;
+    margin-left: 5%;
+    outline: 1px solid black;
+    border-radius: 10%;
+}
+
+.coinGif{
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 15%;
+    width: 300px;
+    height: 300px;
+    opacity: 50%;
+    filter: grayscale(100%);
+}

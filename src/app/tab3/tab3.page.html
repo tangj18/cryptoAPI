@@ -1,17 +1,35 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Hot Topics
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+ <ion-card class="card">
+  <ion-card-header >
+    <ion-card-title class="cardTitle"><ion-icon name="trending-up-outline" class="icon"></ion-icon> Today's Top 25</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content class="cardContent">
+    <ion-list *ngFor="let item of resultInfo" class="top25">
+      <ion-item button *ngFor="let coin of item" class="coinItem" (click)="showInfo(coin)">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-1 class="coinName">{{coin.CoinInfo.Name}}</ion-col>
+            <ion-col col-1 class="coinFullName">{{coin.CoinInfo.FullName}}</ion-col>
+            <ion-col col-1 class="coinPrice">${{cutString(coin.DISPLAY.CAD.PRICE)}}</ion-col>
+          </ion-row>
+        </ion-grid>
+        
+
+      </ion-item>
+      
+    </ion-list>
+  </ion-card-content>
+</ion-card>
+ 
 </ion-content>

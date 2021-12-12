@@ -1,0 +1,38 @@
+.cardTitle{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+.coinName{
+    margin-right:-15px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+.top25{
+    height: 600px;
+    overflow-y: scroll;
+}
+.coinPrice{
+    transform: translateX(20px);
+}
+.icon{
+    margin-bottom: -8px;
+    font-size: 35px;
+}
+
+.card{
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(179, 179, 179);
+}
+
+.cardContent{
+width: 100%;
+}
+
+

@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS cointable(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    cName TEXT, 
+    cCoin TEXT,
+    cPrice NUMBER
+);
+

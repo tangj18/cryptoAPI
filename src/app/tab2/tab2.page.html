@@ -1,17 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Search
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="content">
+  <ion-title class="title">Search Cryptocurrency</ion-title>
+  <form #form="ngForm" (ngSubmit)="searchCrypto(form)" novalidate class="searchBar">
+    <section>
+      <ion-input class="inputField" type="text" required placeholder="Search Cryptocurrency By Coin" [(ngModel)]="coin.name" name="name"></ion-input> 
+      <button class="searchButton" ion-button type="submit"><ion-icon name="search-outline"></ion-icon> Search</button>
+    </section>
+  </form>
+  <ion-img src="https://thumbs.gfycat.com/IllSharpCod-max-1mb.gif" class="coinGif"></ion-img>
+  <!-- <ion-list>
+    <ion-item button *ngFor="let item of (result | async)"
+    >
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-label text-wrap>
+  <h3>{{item.FROMSYMBOL}}</h3>
+  <h4><b>Release date:</b> temp</h4>
+</ion-label>
+
+    </ion-item>
+  </ion-list> -->
+  
+  
 </ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{coinName}} Data</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="setFalse()"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)="testFunction()" id="star">
+      <ion-icon name="star-outline" style="font-size: 30px; padding-right: 20px;"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="infoDiv">
+    <ion-label class="coinName">{{coinName}}</ion-label>
+    <section><ion-label class="coinFullName">{{coinFullName}}</ion-label></section>
+    <section >
+      <ion-label class="coinPrice">${{resultPrice}}</ion-label>  <ion-label style="font-size: 20px;">CAD</ion-label>
+    </section>
+    <ion-label><span class="arrow" [class.highlight]="returnArrow()">{{arrowText}}</span>${{resultChangeDay}}</ion-label>
+    <ion-label> ({{resultChange24h}}%) past 24 hours</ion-label>
+    <div class="chart" id="lineGraph">
+      <canvas id="myChart" width="350" height="350"></canvas>
+    </div>
+    <ion-button (click)="get1Hour()"> 1h </ion-button>
+    <ion-button (click)="get1d()"> 24h </ion-button>
+    <ion-button (click)="get5d()"> 5D </ion-button>
+    <ion-button (click)="get1M()"> 1M </ion-button>
+    <ion-button (click)="get6M()"> 6M </ion-button>
+    <ion-button (click)="get1Y()"> 1Y </ion-button>
+  </div>
+</ion-content>
