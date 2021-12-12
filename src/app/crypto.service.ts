@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class CryptoService {
   url = "https://min-api.cryptocompare.com/data/";
-  apiKey = "e057c303fa16a0bcbc33cedd2815ee2f54893a43b66a4dc46bb2e1a2a6fec0f7";
+  apiKey = "ADD YOUR OWN API KEY";
   constructor(private http : HttpClient) { }
 
   searchCrypto(name: string) {
